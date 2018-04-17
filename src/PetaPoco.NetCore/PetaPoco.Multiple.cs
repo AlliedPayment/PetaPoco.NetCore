@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace PetaPoco.NetCore
+namespace Allied.PetaPoco.NetCore
 {
     public interface IGridReader : IDisposable
     {

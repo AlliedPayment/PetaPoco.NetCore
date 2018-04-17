@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PetaPoco.NetCore.NetCoreTest</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>PetaPoco.NetCore.NetCoreTest</PackageId>
+    <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;dnxcore50</PackageTargetFallback>
+    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PetaPoco.NetCore\PetaPoco.NetCore.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+    <DefineConstants>$(DefineConstants);ASYNC;COREFX</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.0.2" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.0.1" />
+  </ItemGroup>
+
+</Project>

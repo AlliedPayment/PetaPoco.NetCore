@@ -8,3 +8,13 @@ D:\hoping\Project\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\bin\Debug\P
 D:\hoping\Project\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\bin\Debug\PetaPoco.NetCore.xml
 D:\hoping\Project\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\obj\Debug\PetaPoco.NetCore.NetFrameworkTest.exe
 D:\hoping\Project\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\obj\Debug\PetaPoco.NetCore.NetFrameworkTest.pdb
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\obj\Debug\PetaPoco.NetCore.NetFrameworkTest.csprojResolveAssemblyReference.cache
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\obj\Debug\PetaPoco.NetCore.NetFrameworkTest.csproj.CoreCompileInputs.cache
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\bin\Debug\PetaPoco.NetCore.NetFrameworkTest.exe.config
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\bin\Debug\PetaPoco.NetCore.NetFrameworkTest.exe
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\bin\Debug\PetaPoco.NetCore.NetFrameworkTest.pdb
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\bin\Debug\PetaPoco.NetCore.dll
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\bin\Debug\PetaPoco.NetCore.pdb
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\bin\Debug\PetaPoco.NetCore.xml
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\obj\Debug\PetaPoco.NetCore.NetFrameworkTest.exe
+C:\Source\PetaPoco\PetaPoco.NetCore\PetaPoco.NetCore.NetFrameworkTest\obj\Debug\PetaPoco.NetCore.NetFrameworkTest.pdb

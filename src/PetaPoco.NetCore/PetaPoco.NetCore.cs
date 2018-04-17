@@ -20,12 +20,11 @@ using System.Reflection;
 using System.Reflection.Emit;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.IO;
 #if !COREFX
-using System.Configuration;
+
 #endif
 
-namespace PetaPoco.NetCore
+namespace Allied.PetaPoco.NetCore
 {
     // Poco's marked [Explicit] require all column properties to be marked
     [AttributeUsage(AttributeTargets.Class)]
@@ -203,32 +202,43 @@ namespace PetaPoco.NetCore
             ForceDateTimesToUtc = true;
 
             if (_providerName != null)
-#if COREFX
-                _factory = null;// new DbProviderFactory();
-                 string dbtype = _providerName;
-#else
-                _factory = DbProviderFactories.GetFactory(_providerName);
-            string dbtype = (_factory == null ? _sharedConnection.GetType() : _factory.GetType()).Name;
-#endif
+//#if COREFX
+                _factory = null; // new DbProviderFactory();
+            string dbtype = _providerName;
+//#else
+//                _factory = DbProviderFactories.GetFactory(_providerName);
+//            string dbtype = (_factory == null ? _sharedConnection.GetType() : _factory.GetType()).Name;
+//#endif
 
 
 
 
             // Try using type name first (more reliable)
             if (dbtype.StartsWith("MySql")) _dbType = DBType.MySql;
-            else if (dbtype.StartsWith("SqlCe")) _dbType = DBType.SqlServerCE;
-            else if (dbtype.StartsWith("Npgsql")) _dbType = DBType.PostgreSQL;
-            else if (dbtype.StartsWith("Oracle")) _dbType = DBType.Oracle;
-            else if (dbtype.StartsWith("SQLite")) _dbType = DBType.SQLite;
-            else if (dbtype.StartsWith("System.Data.SqlClient.")) _dbType = DBType.SqlServer;
+            else if (dbtype.StartsWith("SqlCe"))
+                _dbType = DBType.SqlServerCE;
+            else if (dbtype.StartsWith("Npgsql"))
+                _dbType = DBType.PostgreSQL;
+            else if (dbtype.StartsWith("Oracle"))
+                _dbType = DBType.Oracle;
+            else if (dbtype.StartsWith("SQLite"))
+                _dbType = DBType.SQLite;
+            else if (dbtype.StartsWith("System.Data.SqlClient."))
+                _dbType = DBType.SqlServer;
             // else try with provider name
-            else if (_providerName.IndexOf("MySql", StringComparison.CurrentCultureIgnoreCase) >= 0) _dbType = DBType.MySql;
-            else if (_providerName.IndexOf("SqlServerCe", StringComparison.CurrentCultureIgnoreCase) >= 0) _dbType = DBType.SqlServerCE;
-            else if (_providerName.IndexOf("Npgsql", StringComparison.CurrentCultureIgnoreCase) >= 0) _dbType = DBType.PostgreSQL;
-            else if (_providerName.IndexOf("Oracle", StringComparison.CurrentCultureIgnoreCase) >= 0) _dbType = DBType.Oracle;
-            else if (_providerName.IndexOf("SQLite", StringComparison.CurrentCultureIgnoreCase) >= 0) _dbType = DBType.SQLite;
+            else if (_providerName.IndexOf("MySql", StringComparison.CurrentCultureIgnoreCase) >= 0)
+                _dbType = DBType.MySql;
+            else if (_providerName.IndexOf("SqlServerCe", StringComparison.CurrentCultureIgnoreCase) >= 0)
+                _dbType = DBType.SqlServerCE;
+            else if (_providerName.IndexOf("Npgsql", StringComparison.CurrentCultureIgnoreCase) >= 0)
+                _dbType = DBType.PostgreSQL;
+            else if (_providerName.IndexOf("Oracle", StringComparison.CurrentCultureIgnoreCase) >= 0)
+                _dbType = DBType.Oracle;
+            else if (_providerName.IndexOf("SQLite", StringComparison.CurrentCultureIgnoreCase) >= 0)
+                _dbType = DBType.SQLite;
 
-            if (_dbType == DBType.MySql && _connectionString != null && _connectionString.IndexOf("Allow User Variables=true") >= 0)
+            if (_dbType == DBType.MySql && _connectionString != null &&
+                _connectionString.IndexOf("Allow User Variables=true") >= 0)
                 _paramPrefix = "?";
             if (_dbType == DBType.Oracle)
                 _paramPrefix = ":";

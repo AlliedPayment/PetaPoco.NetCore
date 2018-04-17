@@ -9,8 +9,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PetaPoco.NetCore")]
-[assembly: AssemblyCopyright("Copyright © chinahuxp@qq.com")]
+[assembly: AssemblyProduct("Allied.PetaPoco.NetCore")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
