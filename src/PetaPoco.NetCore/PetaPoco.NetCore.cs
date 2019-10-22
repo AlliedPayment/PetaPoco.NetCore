@@ -157,6 +157,10 @@ namespace Allied.PetaPoco.NetCore
             CommonConstruct();
         }
 
+        public static Database CreateDatabase(string connectionStringName)
+        {
+            return new Database(connectionStringName);
+        }
 
         public Database(string connectionStringName)
         {
@@ -202,13 +206,13 @@ namespace Allied.PetaPoco.NetCore
             ForceDateTimesToUtc = true;
 
             if (_providerName != null)
-//#if COREFX
+                //#if COREFX
                 _factory = null; // new DbProviderFactory();
             string dbtype = _providerName;
-//#else
-//                _factory = DbProviderFactories.GetFactory(_providerName);
-//            string dbtype = (_factory == null ? _sharedConnection.GetType() : _factory.GetType()).Name;
-//#endif
+            //#else
+            //                _factory = DbProviderFactories.GetFactory(_providerName);
+            //            string dbtype = (_factory == null ? _sharedConnection.GetType() : _factory.GetType()).Name;
+            //#endif
 
 
 
@@ -271,7 +275,7 @@ namespace Allied.PetaPoco.NetCore
             }
             else
             {
-                if (_sharedConnection!=null&&_sharedConnection.State == ConnectionState.Closed)
+                if (_sharedConnection != null && _sharedConnection.State == ConnectionState.Closed)
                 {
                     _sharedConnection.Open();
                 }

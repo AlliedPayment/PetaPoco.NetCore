@@ -4,9 +4,8 @@
     <Description>Allied.PetaPoco.NetCore is a fork of PetaPoco based, add .netcore support,support .netframework and .netcore,petapoco is A high performance Micro-ORM on dotnet supporting SQL Server, MySQL, Sqlite, SqlCE, Firebird etc,support a query and map,and support Multi Mapping, Multiple Results</Description>
     <Copyright>2016 hoping, Inc.</Copyright>
     <AssemblyTitle>Allied.PetaPoco.NetCore</AssemblyTitle>
-    <VersionPrefix>1.0.1</VersionPrefix>
     <Authors>brumschlag</Authors>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net40;net45;netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Allied.PetaPoco.NetCore</AssemblyName>
     <PackageId>Allied.PetaPoco.NetCore</PackageId>
@@ -27,7 +26,7 @@
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
@@ -58,8 +57,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.1.1" />
-	<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
 
   </ItemGroup>
-  
+
 </Project>
