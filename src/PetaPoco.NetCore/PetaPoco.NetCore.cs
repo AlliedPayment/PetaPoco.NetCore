@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -264,7 +265,7 @@ namespace Allied.PetaPoco.NetCore
         {
             if (_sharedConnectionDepth == 0)
             {
-                _sharedConnection = _factory.CreateConnection();
+                _sharedConnection = _factory?.CreateConnection() ?? new SqlConnection(_connectionString); // HACK: fallback to sql connection if no factory present 
                 _sharedConnection.ConnectionString = _connectionString;
                 _sharedConnection.Open();
 
