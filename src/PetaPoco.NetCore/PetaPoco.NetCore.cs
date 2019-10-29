@@ -133,7 +133,7 @@ namespace Allied.PetaPoco.NetCore
     }
 
     // Database class ... this is where most of the action happens
-    public partial class Database : IDisposable
+    public partial class Database : IDisposable, IDatabase
     {
         public Database(IDbConnection connection)
         {
